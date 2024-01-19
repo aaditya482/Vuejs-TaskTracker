@@ -3,12 +3,12 @@ import axios from "axios";
 const state = {
   tasks: [],
 };
-const url = process.env.REACT_APP_NEST_API;
+
 const actions = {
   
   async fetchTasks({ commit }, token) {
     try {
-      const response = await axios.get(`${url}/todo`, {
+      const response = await axios.get(`https://tasktracker-management.onrender.com/todo`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -24,7 +24,7 @@ const actions = {
     console.log(token);
     console.log(name);
     const response = await axios.post(
-      `${url}/todo`,
+      `https://tasktracker-management.onrender.com/todo`,
       {
         name,
       },
@@ -41,7 +41,7 @@ const actions = {
   async updateTasks({ commit }, { taskId, token }) {
     try {
       const response = await axios.patch(
-        `${url}/todo/${taskId}`,
+        `https://tasktracker-management.onrender.com/todo/${taskId}`,
         {},
         {
           headers: {
