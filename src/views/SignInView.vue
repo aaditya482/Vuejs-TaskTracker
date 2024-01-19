@@ -24,9 +24,9 @@ export default {
     });
     const router = useRouter();
     const status = computed(() => store.getters["auth/isAuthenticated"]);
-    const url = process.env.REACT_APP_NEST_API;
+
     const submit = async () => {
-      const response = await fetch(`${url}/auth/login`, {
+      const response = await fetch(`https://tasktracker-management.onrender.com/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials:'include',
