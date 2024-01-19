@@ -36,9 +36,9 @@ export default {
 
     const router=useRouter();
     const status = computed(() => store.getters["auth/isAuthenticated"]);
-
+    const url = process.env.REACT_APP_NEST_API;
     const submit = async () => {
-      const response = await fetch("http://50.17.81.170:3000/auth/signup", {
+      const response = await fetch(`${url}/auth/signup`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials:'include',
