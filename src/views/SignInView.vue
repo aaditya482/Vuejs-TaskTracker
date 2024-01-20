@@ -26,7 +26,7 @@ export default {
     const status = computed(() => store.getters["auth/isAuthenticated"]);
 
     const submit = async () => {
-      const response = await fetch(`https://tasktracker-management.onrender.com/auth/login`, {
+      const response = await fetch("https://tasktracker-management.onrender.com/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials:'include',
