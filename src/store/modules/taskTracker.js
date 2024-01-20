@@ -8,7 +8,7 @@ const actions = {
   
   async fetchTasks({ commit }, token) {
     try {
-      const response = await axios.get(`https://tasktracker-management.onrender.com/todo`, {
+      const response = await axios.get("https://tasktracker-management.onrender.com/todo", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -24,7 +24,7 @@ const actions = {
     console.log(token);
     console.log(name);
     const response = await axios.post(
-      `https://tasktracker-management.onrender.com/todo`,
+      "https://tasktracker-management.onrender.com/todo",
       {
         name,
       },
