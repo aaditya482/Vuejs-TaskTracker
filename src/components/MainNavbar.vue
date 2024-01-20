@@ -35,9 +35,9 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f4f4f4; /* Match the background color of the home page */
+    background-color: #c0d9f3; /* Match the background color of the home page */
     color: #333; /* Text color matching the home page */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
   }
 
   /* Navigation links styling */
